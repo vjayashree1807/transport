@@ -1,0 +1,235 @@
+#:import MapView kivy_garden.mapview.MapView
+#:import GpsBlinker gpsblinker.GpsBlinker
+#:include gpsblinker.kv
+ 
+<HomeMapView>:
+    lat: 13.0700
+    lon: 80.2492
+    zoom: 15
+    double_tap_zoom: True
+    on_zoom:
+        self.zoom = 12 if self.zoom < 12 else self.zoom # set minimum zoom 
+    
+   
+    MapMarkerPopup:
+        id:m2
+        source:"location.png"
+        lat: 13.06181	
+        lon: 80.24866
+        Button:
+            text:"VGP Transport service"
+            background_color: 0.1, 0.5, 1, 1
+            pos_hint: {"x":0.2, "y":.5} 
+            size_hint: 2,1
+    MapMarkerPopup:
+        id:m3
+        source:"location.png"
+        lat: 13.061810
+        lon: 80.248660
+        Button:
+            text:"Kalavani Transport"
+            background_color: 0.1, 0.5, 1, 1
+            pos_hint: {"x":0.2, "y":.5} 
+            size_hint: 2,1
+    MapMarkerPopup:
+        id:m4
+        source:"location.png"
+        lat:13.07374	
+        lon:80.25246
+        Button:
+            text:"Prince Transport & logistics"	
+            background_color: 0.1, 0.5, 1, 1
+            pos_hint: {"x":0.2, "y":.5} 
+            size_hint: 2,1
+            
+    MapMarkerPopup:
+        id:m5
+        source:"location.png"
+        lat: 13.01176	
+        lon:80.15374
+        Button:
+            text:"Sri Mahalkakshmi Transport"	
+            background_color: 0.1, 0.5, 1, 1
+            pos_hint: {"x":0.2, "y":.5} 
+            size_hint: 2,1
+
+    MapMarkerPopup:
+        id:m6
+        source:"location.png"
+        lat: 13.082702
+        lon: 80.242465  
+        Button:
+            text:"Seenu Transport Pvt Ltd"	
+            background_color: 0.1, 0.5, 1, 1
+            pos_hint: {"x":0.2, "y":.5} 
+            size_hint: 2,1
+       
+    MapMarkerPopup:
+        id:m7
+        source:"location.png"
+        lat: 13.090320
+        lon: 80.285130
+        Button:
+            text:"Sri Girija Transport"
+            background_color: 0.1, 0.5, 1, 1
+            pos_hint: {"x":0.2, "y":.5} 
+            size_hint: 2,1
+    MapMarkerPopup:
+        id:m8
+        source:"location.png"
+        lat: 13.105140
+        lon: 80.283430
+        Button:
+            text:"Navata Road Transport"
+            background_color: 0.1, 0.5, 1, 1
+            pos_hint: {"x":0.2, "y":.5} 
+            size_hint: 2,1
+    MapMarkerPopup:
+        id:m9
+        source:"location.png"
+        lat: 13.08981	
+        lon: 80.28912
+        Button:
+            text:"Federal Transport Pvt Ltd"
+            background_color: 0.1, 0.5, 1, 1
+            pos_hint: {"x":0.2, "y":.5} 
+            size_hint: 2,1
+        	
+    MapMarkerPopup:
+        id:m10
+        source:"location.png"
+        lat: 13.06146	
+        lon: 80.15753
+        Button:
+            text:"Chakra Cargo Movers"	
+            background_color: 0.1, 0.5, 1, 1
+            pos_hint: {"x":0.2, "y":.5} 
+            size_hint: 2,1
+   
+    MapMarkerPopup:
+        id:m11
+        source:"location.png"
+        lat:13.08136	
+        lon:80.273201
+        Button:
+            text:"Paradise Transport"	
+            background_color: 0.1, 0.5, 1, 1
+            pos_hint: {"x":0.2, "y":.5} 
+            size_hint: 2,1
+    MapMarkerPopup:
+        id:m12
+        source:"location.png"
+        lat: 13.0777	
+        lon: 80.24318
+        Button:
+            text:"Surat Goods Transport"
+            background_color: 0.1, 0.5, 1, 1
+            pos_hint: {"x":0.2, "y":.5} 
+            size_hint: 2,1
+    MapMarkerPopup:
+        id:m13
+        source:"location.png"
+        lat:13.08394	
+        lon:80.26981
+        Button:
+            text:"Visalandhra Goods Transport"
+            background_color: 0.1, 0.5, 1, 1
+            pos_hint: {"x":0.2, "y":.5} 
+            size_hint: 2,1
+    MapMarkerPopup:
+        id:m14
+        source:"location.png"
+        lat: 13.08394
+        lon: 80.26981
+        Button:
+            text:"Visalandhra Goods Transport"
+            background_color: 0.1, 0.5, 1, 1
+            pos_hint: {"x":0.2, "y":.5} 
+            size_hint: 2,1
+
+    MapMarkerPopup:
+        id:m15
+        source:"location.png"
+        lat: 13.01493	
+        lon: 80.21265
+        Button:
+            text:"Kesineni Cargo Transport"
+            background_color: 0.1, 0.5, 1, 1
+            pos_hint: {"x":0.2, "y":.5} 
+            size_hint: 2,1
+    MapMarkerPopup:
+        id:m16
+        source:"location.png"
+        lat: 13.0777	
+        lon:80.29171
+        Button:
+            text:"ABU Transport"
+            background_color: 0.1, 0.5, 1, 1
+            pos_hint: {"x":0.2, "y":.5} 
+            size_hint: 2,1
+    MapMarkerPopup:
+        id:m17
+        source:"location.png"
+        lat: 13.04597	
+        lon: 80.25866
+        Button:
+            text:"Hindustan cargo ltd"
+            background_color: 0.1, 0.5, 1, 1
+            pos_hint: {"x":0.2, "y":.5} 
+            size_hint: 2,1
+    MapMarkerPopup:
+        id:m18
+        source:"location.png"
+        lat: 13.04298
+        lon: 80.14921
+        Button:
+            text:"TVS Cargo & Transport"
+            background_color: 0.1, 0.5, 1, 1
+            pos_hint: {"x":0.2, "y":.5} 
+            size_hint: 2,1
+    MapMarkerPopup:
+        id:m19
+        source:"location.png"
+        lat: 13.06366
+        lon: 80.24349
+        Button:
+            text:"Dev Forwarder"
+            background_color: 0.1, 0.5, 1, 1
+            pos_hint: {"x":0.2, "y":.5} 
+            size_hint: 2,1
+    MapMarkerPopup:
+        id:m20
+        source:"location.png"
+        lat: 13.027290
+        lon: 80.183190
+        Button:
+            text:"Cadrgo Wings"
+            background_color: 0.1, 0.5, 1, 1
+            pos_hint: {"x":0.2, "y":.5} 
+            size_hint: 2,1
+    MapMarkerPopup:
+        id:m21
+        source:"location.png"
+        lat: 13.124890
+        lon: 80.152270
+        Button:
+            text:"Lakshmi Cargo Ltd"
+            background_color: 0.1, 0.5, 1, 1
+            pos_hint: {"x":0.2, "y":.5} 
+            size_hint: 2,1
+    MapMarkerPopup:
+        id:m22
+        source:"location.png"
+        lat: 13.045210
+        lon: 80.268840
+        Button:
+            text:"SP Goods Transport"
+            background_color: 0.1, 0.5, 1, 1
+            pos_hint: {"x":0.2, "y":.5} 
+            size_hint: 2,1
+    GpsBlinker:
+        lat: root.lat
+        lon: root.lon
+        id: blinker
+
+        

@@ -1,0 +1,84 @@
+#:import utils kivy.utils
+#:include kv/homescreen.kv
+#:include kv/tatascreen.kv
+#:include kv/routescreen.kv
+
+Screen:
+    
+    MDToolbar :
+        id: titlename
+        title : 'Surge Transport'
+        left_action_items : [["menu", lambda x : nav_drawer.toggle_nav_drawer()]]
+        md_bg_color: app.theme_cls.primary_color
+        elevation : 8
+        pos_hint: {"top": 1, "left": 1}
+        size_hint: 1, .1
+        
+                            
+    NavigationLayout :
+        ScreenManager :
+            id: screen_manager
+            size_hint: 1, 1
+            pos_hint: {"top": 1, "left": 1}
+            HomeScreen:
+                name: "home_screen"
+                id: home_screen
+            TataScreen:
+                name: "tata_screen"
+                id: tata_screen
+            RouteScreen:
+                name:"route_screen"
+                id:route_screen
+            
+    MDNavigationDrawer:
+        id: nav_drawer
+        ContentNavigationDrawer:
+            orientation: 'vertical'
+            padding: "8dp"
+            spacing: "8dp"
+            ImageButton:
+                id: profile
+                source: app.img_source_path
+                on_release:
+                    nav_drawer.toggle_nav_drawer()
+                    app.change_screen("profilephoto_screen", direction='right', mode='push')
+            MDLabel:
+                text: "MENU"
+                color: (0,1,0,1)
+                font_style: "H3"
+                size_hint_y: None
+                height: self.texture_size[1]   
+                
+
+            ScrollView:
+                DrawerList:
+                    id: md_list
+                        
+                    MDList:
+                        OneLineIconListItem:
+                            text: "Offers"
+                            
+                            IconLeftWidget:
+                                icon: "offer"
+                                    
+                                                              
+                        OneLineIconListItem:
+                            text: "Feedback"
+                            
+                            IconLeftWidget:
+                                icon: "pen"
+                                    
+                           
+                        OneLineIconListItem:
+                            text: "Reviews & rating"
+                            
+                            IconLeftWidget:
+                                icon: "star-box-multiple"                      
+                            
+
+                        OneLineIconListItem:
+                            text: "Booking history"
+                            
+                            IconLeftWidget:
+                                icon: "history"
+    
